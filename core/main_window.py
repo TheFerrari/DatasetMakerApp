@@ -13,6 +13,7 @@ from tabs.upscale_image.upscale_image_tab import UpscaleImageTab
 from tabs.fuse_characters.fuse_characters_tab import FuseCharactersTab
 from tabs.keyframes.keyframes_tab import KeyframesTab
 from tabs.tag_images.tag_images_tab import TagImagesTab
+from tabs.bulk_tag_editor.bulk_tag_editor_tab import BulkTagEditorTab
 
 logger = logging.getLogger(__name__)
 
@@ -37,6 +38,7 @@ class MainWindow(QWidget):
         self.fuse_characters_tab = FuseCharactersTab()
         self.keyframes_tab = KeyframesTab()
         self.tag_images_tab = TagImagesTab()
+        self.bulk_tag_editor_tab = BulkTagEditorTab()
 
         # Añadir pestañas al widget
         self.tabs.addTab(self.search_tags_tab, "Search Tags")
@@ -44,6 +46,7 @@ class MainWindow(QWidget):
         self.tabs.addTab(self.fuse_characters_tab, "Fuse Characters")
         self.tabs.addTab(self.keyframes_tab, "KeyFrames")
         self.tabs.addTab(self.tag_images_tab, "Tag Images")
+        self.tabs.addTab(self.bulk_tag_editor_tab, "Bulk Tag Editor")
 
         # Layout principal
         main_layout = QVBoxLayout()
