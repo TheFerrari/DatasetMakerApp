@@ -1,0 +1,2 @@
+# Search Tags tab module
+
